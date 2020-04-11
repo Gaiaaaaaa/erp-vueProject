@@ -48,7 +48,7 @@ export default {
       default: ""
     },
     id: {
-      type: Number,
+      type:  Number,
       default: null
     },
     version: {
@@ -98,17 +98,17 @@ export default {
       });
     },
 
-    submitChange() {
-      this.$refs["submitForm"].validate(valid => {
+    submitChange() {   
+      this.$refs["submitForm"].validate(valid =>  {  
         if (valid) {
           this.submitLoading = true;
-          submitChangeName(this.id, this.user.name, this.version)
+          submitChangeName(this.id, this.user.name,  this.version)
             .then(response => {
               console.log(response.data);
               this.submitLoading = false;
               this.$emit("close");
               this.$emit("getList");
-              Utils.success(`${this.isEdit ? "修改" : "添加"}成功`);
+              Utils.success(`${this.isEdit ? "修改" :  "添加"}成功`);
             })
             .catch(error => {
               Utils.error(error);
@@ -135,7 +135,7 @@ export default {
   overflow-y: auto;
 }
 .modal-container {
-  max-width: 400px !important;
+  max-width: 400px  !important;
   height: 210px !important;
 }
 </style>
