@@ -53,7 +53,7 @@ export default {
     },
     version: {
       type: String,
-      default: null  
+      default: null
     }
   },
   data() {
