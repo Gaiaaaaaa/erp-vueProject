@@ -18,7 +18,7 @@
                         <el-select v-model="vintage" placeholder="请选择" size="small" clearable  @keyup.enter.native="search">
                             <el-option
                                 v-for="item in options1"
-                                :key="item.dictCode"
+                                :key="item.dictCode"   
                                 :label="item.dictValue"
                                 :value="item.dictValue">
                             </el-option>
@@ -41,7 +41,7 @@
                         <span>{{scope.row.communityCode}}</span>
                         </template>
                     </el-table-column>
-
+  
                     <el-table-column align="center" max-width="150" label="数据库名称">
                         <template slot-scope="scope">
                         <el-button @click="toView(scope.row)" type="text">{{scope.row.name}}</el-button>
