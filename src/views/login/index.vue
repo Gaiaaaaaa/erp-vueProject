@@ -69,7 +69,7 @@ export default {
   },
   methods: {
     handleLogin() {
-      this.$refs.loginForm.validate(valid => {
+      this.$refs.rectangle.validate(valid => {
         if (valid) {
           this.loading = true;
           this.$store
